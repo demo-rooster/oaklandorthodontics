@@ -20,18 +20,18 @@
 
   &__social-media
     @include col (2)
+    align-self: flex-end
     @include tablet
       align-self: flex-start
       margin-top: 2rem
       background-image: none !important
-    align-self: flex-end
 
   &__row
     align-items: baseline
     &:not(:last-child)
+      margin-bottom: rem-calc(20)
       @include nexus
         margin-bottom: 2rem
-      margin-bottom: rem-calc(20)
 
   &__menu, &__items, &__social-links
     display: flex
@@ -42,16 +42,19 @@
     list-style: none
 
   &__menu
+    flex-wrap: wrap
     @include nexus
       display: block
-    flex-wrap: wrap
 
   &__menu-item
     &:not(:last-child)
+      margin-right: 2vw
       @include nexus
         margin-right: 0
         margin-bottom: 1.5rem
-      margin-right: 2vw
+      @include phone-lg
+        margin-right: 0
+        margin-bottom: 1rem
 
   &__copyright-item, &__brand-item
     @extend %small-text
@@ -84,28 +87,31 @@
     color: var(--textColor)
 
   &__items
+    flex-wrap: wrap
     @include nexus
       flex-direction: column-reverse
-    flex-wrap: wrap
 
   &__item
-    @include nexus
-      margin: 1rem 0 0
     position: relative
     margin: 1rem 1vw 0 0
     line-height: 1
+    @include nexus
+      margin: 1rem 0 0
+    @include phone-lg
+      margin: 0.75rem 0 0
     &:not(:last-child)
-      @include nexus
-        border: none
       border-right: 1px solid var(--textColor)
       padding-right: 1vw
+      @include nexus
+        border: none
+        padding-right: 0
     &:last-child
       margin-right: 0
 
   &__social-links
+    justify-content: flex-end
     @include tablet
       justify-content: flex-start
-    justify-content: flex-end
 
   &__social-item
     &:not(:last-child)
@@ -121,13 +127,13 @@
         outline: 1px dashed var(--textColor)
         outline-offset: rem-calc(6)
         fill: var(--accent)
-    @include tablet
-      justify-content: flex-start
     display: flex
     align-items: flex-end
     justify-content: flex-end
     width: rem-calc(44)
     height: rem-calc(44)
+    @include tablet
+      justify-content: flex-start
 
     &:active
       .footer__social-icon

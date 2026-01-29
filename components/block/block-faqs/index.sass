@@ -26,12 +26,6 @@
     text-align: center
 
   &__accordion
-    @include phone-land-lg
-      padding: 1rem
-    @include nexus
-      padding: 2rem
-    @include phone-lg
-      padding: 1rem
     display: flex
     flex-direction: column
     margin-bottom: 4rem
@@ -41,6 +35,12 @@
     width: 100%
     max-width: rem-calc(992)
     height: fit-content
+    @include nexus
+      padding: 2rem
+    @include phone-land-lg
+      padding: 1rem
+    @include phone-lg
+      padding: 1rem
 
   &__bg
     @include container
@@ -77,10 +77,10 @@
       border-bottom: 2px solid rgba(var(--accent-rgb), 0.5)
     
     &-title
-      @include tablet
-        font-size: 1.25rem
       width: calc(100% - 16px)
       font-size: 1.125rem
+      @include tablet
+        font-size: 1.25rem
 
     &:first-of-type
       padding: 0 0 1rem
@@ -104,9 +104,6 @@
     // .block-faqs__row--active &
     //   padding: 1rem 0 rem-calc(10)
   &__button
-    @include nexus
-      width: 1rem
-      height: 1rem
     @include hover-supported
       span
         background: $black
@@ -116,6 +113,9 @@
     cursor: pointer
     width: 1.5rem
     height: 1.5rem
+    @include nexus
+      width: 1rem
+      height: 1rem
 
     span
       @include nexus
@@ -163,11 +163,11 @@
     width: 30%
 
     &--full
+      width: 60%
       @include phone-land-lg
         width: 30%
       @include nexus
         width: 100%
-      width: 60%
 
   &__image
     position: relative
@@ -244,11 +244,11 @@
     width: 100%
 
     &--small
+      width: 65%
       @include phone-land-lg
         width: 65%
       @include nexus
         width: 100%
-      width: 65%
 
     a
       transition: color .5s ease

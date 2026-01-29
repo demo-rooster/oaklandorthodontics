@@ -84,22 +84,22 @@
       margin-right: rem-calc(24)
 
     &-icon
-      @include tablet-lg
-        width: rem-calc(22)
-        height: rem-calc(22)
       display: flex
       justify-content: center
       margin-right: rem-calc(3)
       width: rem-calc(18)
       height: rem-calc(18)
+      @include tablet-lg
+        width: rem-calc(22)
+        height: rem-calc(22)
 
       svg
         transition: fill .2s ease
   
     &-text
+      transition: color .2s ease
       @include tablet-lg
         display: none
-      transition: color .2s ease
 
   &__announcement
     display: flex

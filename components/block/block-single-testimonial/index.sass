@@ -33,10 +33,10 @@
     gap: 2rem
 
   &__review-text
-    @include desktop
-      font-size: rem-calc(20)
     line-height: 1
     font-size: rem-calc(18)
+    @include desktop
+      font-size: rem-calc(20)
 
   &__links
     display: flex
@@ -57,23 +57,18 @@
       transition: fill 200ms ease
 
   &__testimonial
-    @include desktop
-      font-size: rem-calc(24)
-    @include nexus
-      font-size: rem-calc(16)
     position: relative
     z-index: 2
     margin-top: 2rem
     text-align: center
     line-height: 1.375
     font-size: rem-calc(20)
+    @include desktop
+      font-size: rem-calc(24)
+    @include nexus
+      font-size: rem-calc(16)
 
   &__author
-    @include desktop
-      margin: 3rem auto 0
-      font-size: rem-calc(24)
-    @include tablet-lg
-      font-size: rem-calc(18)
     position: relative
     z-index: 2
     margin: 2rem auto 0
@@ -81,6 +76,11 @@
     text-align: center
     font-size: rem-calc(20)
     font-style: italic
+    @include desktop
+      margin: 3rem auto 0
+      font-size: rem-calc(24)
+    @include tablet-lg
+      font-size: rem-calc(18)
 
     &:before
       position: absolute

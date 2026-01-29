@@ -14,9 +14,9 @@
       overflow: unset
 
   &[data-large-image]
+    padding: 0
     @include tablet
       padding-bottom: 3rem
-    padding: 0
 
   &__container
     @include container
@@ -51,30 +51,30 @@
       @include col--offset (7)
 
       .block-tabs__container--reverse &
+        order: -1
+        margin-left: calc((1/12)*100%)
         @include tablet-lg
           margin-left: 0
         @include tablet
           order: 2
-        order: -1
-        margin-left: calc((1/12)*100%)
 
     .block-tabs__container--reverse &
+      order: -1
       @include tablet-lg
         margin-left: 0
       @include tablet
         order: 2
-      order: -1
 
   &__image-container
     // @include desktop
     //   max-height: rem-calc(800)
+    position: relative
+    transition: all .2s ease
+    padding-top: 100%
     @include tablet
       padding-top: 60%
     @include phone-lg
       padding-top: 70%
-    position: relative
-    transition: all .2s ease
-    padding-top: 100%
     // max-height: rem-calc(750)
 
   &__image
@@ -114,18 +114,18 @@
         width: 100%
 
   &__content
+    padding: 0 0 3rem
     @include desktop
       padding: 0 0 4rem
     @include tablet
       padding: 3rem 0 0
-    padding: 0 0 3rem
 
     .block-tabs[data-large-image] &
+      padding: 0 0 4rem
       @include desktop
         padding: 0 0 6rem
       @include tablet
         padding: 0 0 3rem
-      padding: 0 0 4rem
 
   &__title
     margin-bottom: 1.5rem
@@ -140,11 +140,6 @@
       font-weight: 700
 
       &:after
-        @include tablet
-          bottom: -1.5rem
-        @include phone-lg
-          width: 33%
-          max-width: 100%
         position: absolute
         bottom: -1rem
         left: 0
@@ -152,6 +147,11 @@
         width: var(--itBarWidth)
         max-width: rem-calc(220)
         content: ''
+        @include tablet
+          bottom: -1.5rem
+        @include phone-lg
+          width: 33%
+          max-width: 100%
 
     &--display-block
       display: block
@@ -166,12 +166,12 @@
       margin-bottom: rem-calc(20)
 
   &__paragraph-heading
-    @include desktop
-      font-size: rem-calc(20)
     margin-bottom: .25rem
     letter-spacing: .0125em
     font-size: rem-calc(18)
     font-weight: 700
+    @include desktop
+      font-size: rem-calc(20)
 
   &__buttons
     margin-top: 3rem
@@ -182,11 +182,11 @@
 
   &__modal
     .base-modal__content
+      padding: 2rem
       @include tablet
         padding: 1rem
       @include phone-land-lg
         padding: .25rem
-      padding: 2rem
 
     &-container
       position: relative

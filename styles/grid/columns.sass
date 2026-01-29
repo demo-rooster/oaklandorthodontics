@@ -3,11 +3,11 @@
 // --------------------------------------------------------
 
 @mixin col ($cols)
+  padding: 0 calc(#{$gutter} / 2)
+  width: calc((#{$cols} / #{$columns}) * 100%)
   @include tablet
     padding: 0
     width: 100%
-  padding: 0 calc(#{$gutter} / 2)
-  width: calc((#{$cols} / #{$columns}) * 100%)
 
 @mixin col--tablet ($cols)
   @include tablet
@@ -19,6 +19,6 @@
     width: 100%
 
 @mixin col--offset ($cols)
+  margin-left: calc((#{$cols} / #{$columns}) * 100%)
   @include tablet
     margin-left: 0
-  margin-left: calc((#{$cols} / #{$columns}) * 100%)

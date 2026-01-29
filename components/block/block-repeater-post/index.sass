@@ -17,12 +17,12 @@
 
   &__body
     @extend %body
-    
+
     @include col (10)
-    @include tablet
-      margin-bottom: 2rem
     margin-bottom: 4rem
     text-align: center
+    @include tablet
+      margin-bottom: 2rem
 
   &__posts
     display: flex
@@ -38,51 +38,51 @@
     width: 100%
 
   &__post
-    @include nexus
-      padding: 0
     display: inline-flex
     flex-direction: column
     width: 100%
+    @include nexus
+      padding: 0
 
     &--square
-      @include tablet
-        width: 100%
       border: 1px solid $gray
       width: calc(50% - 1rem)
+      @include tablet
+        width: 100%
 
       &--thirds
+        width: calc((100% / 3) - 1rem)
         @include tablet
           width: 100%
-        width: calc((100% / 3) - 1rem)
 
       &:not(:last-child)
+        margin-right: 1rem
         @include tablet
           margin-right: unset
           margin-bottom: 1rem
-        margin-right: 1rem
 
     &--row
-      @include tablet
-        border-right: 1px solid $gray
-        border-left: 1px solid $gray
-        padding: 0
       display: flex
       flex-direction: unset
       flex-wrap: wrap
       // align-items: center
       column-gap: 2rem
       padding: 2rem 0
+      @include tablet
+        border-right: 1px solid $gray
+        border-left: 1px solid $gray
+        padding: 0
 
       &:not(:last-of-type)
         //   margin-bottom: 1rem
         border-bottom: 1px solid $gray
 
     &-image-container
-      @include tablet
-        max-width: unset
       width: 100%
       max-width: rem-calc(325)
       height: auto
+      @include tablet
+        max-width: unset
 
     &-image
       padding-top: 70%
@@ -125,20 +125,15 @@
       width: fit-content
 
       .block-repeater-post__post--row &
+        align-self: flex-start
         @include tablet
           align-self: flex-start
-        align-self: flex-start
 
   &__load-more
     @include hover-supported
       border: 2px solid var(--accent)
       background: var(--accent)
       color: $white
-    @include desktop
-      padding: rem-calc(12) rem-calc(24)
-    @include max-width (300px)
-      padding: rem-calc(10) 0
-      font-size: 4.5vw
     display: block
     transition: color .2s ease, background .2s ease, border .2s ease
     margin: 0 auto
@@ -154,3 +149,8 @@
     font-size: rem-calc(15)
     font-weight: 600
     -webkit-tap-highlight-color: transparent
+    @include desktop
+      padding: rem-calc(12) rem-calc(24)
+    @include max-width (300px)
+      padding: rem-calc(10) 0
+      font-size: rem-calc(14)

@@ -30,15 +30,6 @@
       background: var(--primary)
       &::before, &::after
         background: $white
-    @include tablet-lg
-      width: 2rem
-      height: 2rem
-    @include phone-lg
-      width: rem-calc(24)
-      height: rem-calc(24)
-    @include phone-land-lg
-      top: .5rem
-      right: .5rem
     position: absolute
     top: 1rem
     right: 1rem
@@ -50,6 +41,15 @@
     pointer-events: auto
     width: rem-calc(40)
     height: rem-calc(40)
+    @include tablet-lg
+      width: 2rem
+      height: 2rem
+    @include phone-lg
+      width: rem-calc(24)
+      height: rem-calc(24)
+    @include phone-land-lg
+      top: .5rem
+      right: .5rem
 
     &::before, &::after
       @extend %centered
@@ -66,10 +66,10 @@
       transform: translate(-50%, -50%) rotate(-45deg)
     
   &__content
+    padding: 5.5rem
+    max-height: 100%
+    overflow-y: auto
     @include tablet-lg
       padding: 2rem 3rem
     @include phone-lg
       padding: 1rem 2rem
-    padding: 5.5rem
-    max-height: 100%
-    overflow-y: auto

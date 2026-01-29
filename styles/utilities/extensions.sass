@@ -18,13 +18,13 @@
   width: 100%
 
 %section-padding
+  padding: 7rem 0
   @include desktop
     padding: 8rem 0
   @include tablet-lg
     padding: 4rem 0
   @include tablet
     padding: 3rem 0
-  padding: 7rem 0
 
 // ===============================
 //        Component Spacing
@@ -42,6 +42,7 @@ $spacing-mobile: 48
   @extend %component-padding--bottom
 
   &--top
+    padding-top: rem-calc($spacing-default)
     @include desktop
       padding-top: rem-calc($spacing-desktop)
     @include tablet-lg
@@ -50,9 +51,9 @@ $spacing-mobile: 48
       padding-top: rem-calc($spacing-mobile)
     @include nexus
       padding-top: rem-calc($spacing-mobile)
-    padding-top: rem-calc($spacing-default)
 
   &--bottom
+    padding-bottom: rem-calc($spacing-default)
     @include desktop
       padding-bottom: rem-calc($spacing-desktop)
     @include tablet-lg
@@ -61,13 +62,13 @@ $spacing-mobile: 48
       padding-bottom: rem-calc($spacing-mobile)
     @include nexus
       padding-bottom: rem-calc($spacing-mobile)
-    padding-bottom: rem-calc($spacing-default)
 
   &--half
     @extend %component-padding--half-top
     @extend %component-padding--half-bottom
 
   &--half-top
+    padding-top: rem-calc(($spacing-default / 2))
     @include desktop
       padding-top: rem-calc(($spacing-desktop / 2))
     @include tablet-lg
@@ -76,9 +77,9 @@ $spacing-mobile: 48
       padding-top: rem-calc(($spacing-mobile / 2))
     @include nexus
       padding-top: rem-calc(($spacing-mobile / 2))
-    padding-top: rem-calc(($spacing-default / 2))
 
   &--half-bottom
+    padding-bottom: rem-calc(($spacing-default / 2))
     @include desktop
       padding-bottom: rem-calc(($spacing-desktop / 2))
     @include tablet-lg
@@ -87,7 +88,6 @@ $spacing-mobile: 48
       padding-bottom: rem-calc(($spacing-mobile / 2))
     @include nexus
       padding-bottom: rem-calc(($spacing-mobile / 2))
-    padding-bottom: rem-calc(($spacing-default / 2))
 
 // -------Component Margins-------
 %component-margins
@@ -95,6 +95,7 @@ $spacing-mobile: 48
   @extend %component-margins--bottom
 
   &--top
+    margin-top: rem-calc($spacing-default)
     @include desktop
       margin-top: rem-calc($spacing-desktop)
     @include tablet-lg
@@ -103,9 +104,9 @@ $spacing-mobile: 48
       margin-top: rem-calc($spacing-mobile)
     @include nexus
       margin-top: rem-calc($spacing-mobile)
-    margin-top: rem-calc($spacing-default)
 
   &--bottom
+    margin-bottom: rem-calc($spacing-default)
     @include desktop
       margin-bottom: rem-calc($spacing-desktop)
     @include tablet-lg
@@ -114,13 +115,13 @@ $spacing-mobile: 48
       margin-bottom: rem-calc($spacing-mobile)
     @include nexus
       margin-bottom: rem-calc($spacing-mobile)
-    margin-bottom: rem-calc($spacing-default)
 
   &--half
     @extend %component-margins--half-top
     @extend %component-margins--half-bottom
 
   &--half-top
+    margin-top: rem-calc(($spacing-default / 2))
     @include desktop
       margin-top: rem-calc(($spacing-desktop / 2))
     @include tablet-lg
@@ -129,9 +130,9 @@ $spacing-mobile: 48
       margin-top: rem-calc(($spacing-mobile / 2))
     @include nexus
       margin-top: rem-calc(($spacing-mobile / 2))
-    margin-top: rem-calc(($spacing-default / 2))
 
   &--half-bottom
+    margin-bottom: rem-calc(($spacing-default / 2))
     @include desktop
       margin-bottom: rem-calc(($spacing-desktop / 2))
     @include tablet-lg
@@ -140,6 +141,4 @@ $spacing-mobile: 48
       margin-bottom: rem-calc(($spacing-mobile / 2))
     @include nexus
       margin-bottom: rem-calc(($spacing-mobile / 2))
-    margin-bottom: rem-calc(($spacing-default / 2))
-
 

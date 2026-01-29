@@ -1,21 +1,16 @@
 .base-button
-  @include max-width (300px)
-    width: 100%
-    text-align: center
   display: block
   position: relative
   width: fit-content
+  @include max-width (300px)
+    width: 100%
+    text-align: center
 
   &__cta
     @include hover-supported
       border: 2px solid var(--btn-bg, var(--accent))
       background: transparent
       color: var(--text)
-    @include desktop
-      padding: rem-calc(12) 2rem
-    @include max-width (300px)
-      padding: rem-calc(10) 0
-      font-size: 4.5vw
     display: block
     transition: color .2s ease, background .2s ease, border .2s ease
     border: 2px solid var(--btn-bg, var(--accent))
@@ -26,6 +21,11 @@
     font-size: rem-calc(15)
     font-weight: 600
     -webkit-tap-highlight-color: transparent
+    @include desktop
+      padding: rem-calc(12) 2rem
+    @include max-width (300px)
+      padding: rem-calc(10) 0
+      font-size: 4.5vw
 
     &--button
       cursor: pointer

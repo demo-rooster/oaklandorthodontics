@@ -7,13 +7,13 @@
   &__container
     @include container
     @include col(8)
+    flex-direction: column
+    margin: rem-calc(150) auto 2rem
+    padding: 0 1rem !important
     @include tablet
       margin: rem-calc(100) auto 2rem
     @include phone-land-lg
       margin: rem-calc(100) auto 2rem
-    flex-direction: column
-    margin: rem-calc(150) auto 2rem
-    padding: 0 1rem !important
 
   &__image
     margin: 0 auto 1rem
@@ -50,9 +50,9 @@
     font-weight: 500
 
   &__social-group
+    display: flex
     @include nexus
       margin-top: .5rem
-    display: flex
 
   &__social-circle
 
@@ -80,11 +80,11 @@
       font-weight: 600
 
     iframe
-      @include tablet
-        height: 60vw
       width: 90%
       max-width: 800px
       height: 500px
+      @include tablet
+        height: 60vw
 
     a
       transition: all .25s ease
@@ -99,10 +99,10 @@
   &__paragraph
 
     &--header
-      @include tablet
-        margin-top: 1rem
       margin-top: 2rem
       margin-bottom: 1rem
+      @include tablet
+        margin-top: 1rem
 
     &--body
       &:not(:last-of-type)
@@ -116,6 +116,8 @@
         margin: 1rem 0
 
       video
+        width: 70%
+        max-width: 750px
         @include laptop
           width: 80%
         @include tablet-lg
@@ -124,8 +126,6 @@
           width: 70%
         @include nexus
           width: 100%
-        width: 70%
-        max-width: 750px
 
   &__links
     display: flex

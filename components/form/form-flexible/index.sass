@@ -25,17 +25,17 @@
       margin-bottom: 0
 
     &--half
+      flex-basis: 46%
       @include tablet-lg
         flex-basis: 100%
-      flex-basis: 46%
 
     &--radio
-      @include phone-lg
-        flex-wrap: wrap
       display: flex
       flex-direction: column
       border: none
       padding: 0
+      @include phone-lg
+        flex-wrap: wrap
 
     &--checkbox
       border: none
@@ -142,12 +142,12 @@
     padding: 1rem 0
 
     &--alt
-      @include phone-lg
-        width: 100%
       display: flex
       flex-grow: 1
       flex-wrap: wrap
       gap: 2rem
+      @include phone-lg
+        width: 100%
 
     &-title
       margin-bottom: .25rem
@@ -367,8 +367,6 @@
     &-close
       @include hover-supported
         color: var(--primary)
-      @include phone-lg
-        right: 1rem
       position: absolute
       top: 1rem
       right: 2rem
@@ -376,6 +374,8 @@
       background: transparent
       cursor: pointer
       padding: 0
+      @include phone-lg
+        right: 1rem
 
     &-title
       color: var(--primary)

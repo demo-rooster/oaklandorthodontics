@@ -4,13 +4,13 @@
   background: #f5f5f5
 
   &[data-no-title]
+    padding: 5rem 0 7rem
     @include desktop
       padding: 6rem 0 8rem
     @include tablet-lg
       padding: 2rem 0 4rem
     @include tablet
       padding: 1rem 0 3rem
-    padding: 5rem 0 7rem
 
   &__container
     @include container
@@ -28,16 +28,11 @@
 
     &--large
       @extend %h1
+      margin-bottom: 3rem
       @include desktop
         margin-bottom: 3.5rem
-      margin-bottom: 3rem
 
     &:after
-      @include tablet
-        bottom: -1.5rem
-      @include phone-lg
-        width: 33%
-        max-width: 100%
       position: absolute
       bottom: -1.5rem
       left: 50%
@@ -46,6 +41,11 @@
       width: 50%
       max-width: rem-calc(250)
       content: ''
+      @include tablet
+        bottom: -1.5rem
+      @include phone-lg
+        width: 33%
+        max-width: 100%
 
     &--left
       text-align: left
@@ -54,19 +54,19 @@
       color: var(--primary)
 
   &__row
-    @include tablet
-      justify-content: space-around
     display: flex
     flex-wrap: wrap
     align-items: stretch
     justify-content: space-evenly
     row-gap: 2rem
+    @include tablet
+      justify-content: space-around
 
     &--large
       @include col (12)
+      margin-left: 0
       @include tablet-lg
         justify-content: space-around
-      margin-left: 0
 
   &__item
     @include col (4)
@@ -77,68 +77,66 @@
       text-align: left
 
   &__item[data-items='3']
+    width: 30%
     @include tablet
       width: 45%
     @include phone-lg
       width: 100%
-    width: 30%
 
   &__item[data-items='4']
+    width: 22%
     @include tablet-lg
       width: 45%
     @include nexus
       width: 100%
-    width: 22%
 
   &__item[data-items='5']
+    width: 18%
     @include tablet-lg
       width: 30%
     @include tablet
       width: 45%
     @include phone-lg
       width: 100%
-    width: 18%
 
   &__icon
+    display: block
+    margin: 0 auto 1.5rem
+    width: rem-calc(80)
+    height: rem-calc(80)
     @include desktop
       width: rem-calc(90)
       height: rem-calc(90)
     @include tablet-lg
       width: 4rem
       height: 4rem
-    display: block
-    margin: 0 auto 1.5rem
-    width: rem-calc(80)
-    height: rem-calc(80)
 
   &__image
-    @include desktop
-      height: 15rem
-    @include tablet-lg
-      height: 15rem
     display: block
     margin: 1rem auto 1.5rem
     width: 100%
     height: 12rem
+    @include desktop
+      height: 15rem
+    @include tablet-lg
+      height: 15rem
 
     .base-image__image
       object-fit: cover
 
   &__item-title
     @extend %h4
+    padding-bottom: 1rem
     @include desktop
       padding-bottom: 1.1rem
-    padding-bottom: 1rem
 
   &__content
-    @include desktop
-      padding-top: 1.5rem
     position: relative
     padding-top: 1.3rem
+    @include desktop
+      padding-top: 1.5rem
 
     &:before
-      @include phone-lg
-        width: 66%
       position: absolute
       top: 0
       left: 50%
@@ -146,6 +144,8 @@
       border-top: 1px solid rgba(var(--text-rgb), .3)
       width: 100%
       content: ''
+      @include phone-lg
+        width: 66%
 
   &__item-btn
     margin: 1.5rem auto 0
@@ -157,4 +157,3 @@
     display: flex
     justify-content: center
     margin-top: 5rem
-    

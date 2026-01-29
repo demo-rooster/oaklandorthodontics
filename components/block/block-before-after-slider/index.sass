@@ -23,6 +23,11 @@
   &__col
     @include col (10)
     @include col--offset (1)
+    display: flex
+    position: relative
+    flex-direction: column
+    margin-bottom: 4rem
+    text-align: center
     @include tablet-lg
       margin-left: 0
       width: 100%
@@ -30,11 +35,6 @@
       margin-bottom: 2rem
     @include phone-land-lg
       margin-bottom: 2rem
-    display: flex
-    position: relative
-    flex-direction: column
-    margin-bottom: 4rem
-    text-align: center
 
   &__title
     color: var(--siSliderTextColor)
@@ -51,15 +51,15 @@
   &__carousel
     @include col (10)
     @include col--offset (1)
+    display: flex
+    align-items: center
+    justify-content: space-around
     @include tablet-lg
       margin-left: 0
       width: 100%
     @include tablet
       flex-wrap: wrap
       justify-content: space-between
-    display: flex
-    align-items: center
-    justify-content: space-around
 
   &__slider
     @include tablet
@@ -108,11 +108,11 @@
       background: var(--siSliderTextColor)
       .block-before-after-slider__icon
         stroke: $white
-    @include tablet
-      margin-top: 1.5rem
     display: flex
     align-items: center
     justify-content: center
+    @include tablet
+      margin-top: 1.5rem
     transition: background .2s ease
     // margin-right: rem-calc(20)
     border: 1px solid var(--siSliderTextColor)

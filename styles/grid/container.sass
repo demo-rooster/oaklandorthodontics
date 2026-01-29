@@ -3,12 +3,6 @@
 // --------------------------------------------------------
 
 @mixin container
-  @include desktop
-    max-width: $max-width
-  @include tablet
-    padding: 0 2rem
-  @include phone-lg
-    padding: 0 1rem
   display: flex
   position: relative
   flex-wrap: wrap
@@ -16,10 +10,16 @@
   padding: 0 calc((#{$outside-gutter} / 2) - #{$gutter / 2})
   width: 100%
   max-width: calc(#{$width} + #{$outside-gutter})
+  @include desktop
+    max-width: $max-width
+  @include tablet
+    padding: 0 2rem
+  @include phone-lg
+    padding: 0 1rem
 
 @mixin container--large
   @include container
-  @include desktop
-    max-width: calc(#{$max-width-large} + 64px)
   padding: 0 2rem
   max-width: calc(#{$max-width} + 64px)
+  @include desktop
+    max-width: calc(#{$max-width-large} + 64px)

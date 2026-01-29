@@ -2,19 +2,19 @@
   text-align: center
 
   &__container
-    @include nexus
-      gap: 1rem
     display: flex
     flex-direction: column
     align-items: center
     gap: 2rem
+    @include nexus
+      gap: 1rem
 
   &__title
     @extend %h2
 
   &__image
-    @include nexus
-      width: 100%
     width: 60%
     height: auto
     aspect-ratio: 2/1
+    @include nexus
+      width: 100%
